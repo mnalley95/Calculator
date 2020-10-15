@@ -77,3 +77,21 @@ struct StockHolding2{T <: Real, P <: AbstractFloat}
     price::P
     marketvalue::P
 end
+
+#parametric abstract types
+abstract type Holding{P} end
+
+
+struct StockHolding3{T, P} <: Holding{P}
+
+    stock::Stock
+    quantity::T
+    price::P
+    marketvalue::P
+   end
+   
+   struct CashHolding{P} <: Holding{P}
+    currency::String
+    amount::P
+    marketvalue::P
+   end
