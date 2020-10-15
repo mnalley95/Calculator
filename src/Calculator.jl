@@ -23,9 +23,3 @@ end
 
 end # module
 
-
-#using a type parameter enables flexible typing - ex: be able to hold int and fractional shares
-struct StockHolding{T <: Real}
-    stock::Stock
-    quantity::T
-end
